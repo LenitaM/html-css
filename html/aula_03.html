@@ -1,0 +1,94 @@
+<!--AULA 04: 19 DE SETEMBRO DE 2022 --> 
+<!--tags semânticas: hearder, main, section.como as tabelas funcionam. exercícios HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header> <!--cabeçalho - Introduz um assunto, o que vai ser a página-->
+        <h1>Estudos de HTML</h1>
+        <h3>Conceitos introdutórios da linguagem</h3>
+        <nav> <!--Agrupa links de navegação, para outras paginas, dá significados aos blocos-->
+            <ol> <!--bloco para por listas-->
+                <li> <a href="#intro">Introdução </a></li>
+            </ol>
+        </nav>
+    </header> 
+    
+    <main> <!--contéudo principal da página, conteúdo mais relevantes, ajuda a guiar o desenvolvedor-->
+    <section> <!--separa tópicos ou contéudos. Delimitando, destacando um contéudo-->
+         <!-- <div> usador para estilizar-->
+    <h3>Uso de tags</h3>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, maxime reprehenderit rem fuga ab quibusdam error enim distinctio ipsam ut sit itaque quidem non corrupti nobis rerum quod porro sunt modi quae beatae molestiae ratione iste. Pariatur dolorum laborum repellendus.
+    </p>
+    <hr /> <!--auto fechamento, Horizontal Rule, linha horizontal-->
+</section>
+<section>
+    <h3>Uso de tabelas</h3>
+    <table border="1" cellpadding="3" style="border-collapse: collapse;"> <!-- tabela-->
+        <thead> <!-- Cabeçalho da tabelo, faz seções, colunas-->
+            <tr><!--Table Row, linha das tabelas, sempre criar se for adicionar linhas-->
+            <th colspan="4">Usuários do Sistema</th> <!--Titulo da tabela, <colspan = duração da coluna ex: deve expandir de acordo com a quantidade colunas-->
+            </tr>
+            <tr>
+                 <th>Tipo</th> <!--pra criar outra célula precisa adc um <tr> tb-->
+                <th>Nome</th> <!--Table Header: cabeçalhos das tabelas, as celulas das tabelas-->
+                 <th>CPF</th>
+                 <th>Data Nascimento</th>
+        </thead> <!--colspan = Mescla na horizontal. rowspan =  Mescla na Vertical-->
+        <tbody> <!--corpo da tabela, listas preenche as tablas e colunas-->
+            <tr> <!--designas valores ao thead-->
+                <td rowspan="2">Funcionários</td> <!--da titulos a tabela, rowspan diz quantos linhas vai pegar, expendir linhas-->
+                <td>Lenita Maciel</td> <!--introduz valores dentro da tabela-->
+                <td>000.000.00-00</td>
+                <td>21.02.1997</td> 
+            </tr>
+            <tr> <!--rowspan="números de linhas" = célula abrange as linhas-->
+                <td>Maria Clara</td>
+                <td>000.000.00-00</td>
+                <td>00.00.0000</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Clientes</td>
+                <td>Julia Cabral</td>
+                <td>000.000.00-00</td>
+                <td>00.00.0000</td>
+            </tr>
+            <tr>
+                <td>Ana Julia</td>
+                <td>000.000.00-00</td>
+                <td>00.00.0000</td>
+            </tr>
+        </tbody>
+                </table>
+                <hr />
+                <table border="1" cellpadding="4" style="border-collapse: collapse;">
+                    <!--outra maneira de fazer tabelas-->
+                    <tr>
+                        <td colspan="2">Celula 1-1</td> <!--assim ocupa o espaço de duas celulas-->
+                        <td>Celula 1-3</td>
+                    </tr>
+                    <tr>
+                        <td>Celula 2-1</td>
+                        <td>Celula 2-2</td>
+                        <td>Celula 3-3</td>
+                    </tr>
+
+                </table>
+            </section>
+        </main>
+    <hr /> 
+    <footer> <!--Dá informações sobre autoria/encerra o contéudo-->
+        © <!--simbolo do copywrite-->
+        <script>
+            Document.Write(new Date().getFullYear()) //escreve a data atual
+        </script>
+        SoulCode Academy
+    </footer>
+</body>
+</html>
