@@ -1,0 +1,95 @@
+<!--AULA 04 20 DE SETEMBRO DE 2022 - FORMULÁRIOS -->
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form> <!--Container de inputs // campo do formulário-->
+<div> <!--mais usada pra agrupar label e input o <section> é mais usada pra artigos, textos-->
+<label for ="campoNome">Nome Completo</label><br/> <!--rotulo, da nome ao input-->
+<input id="campoNome" name="campoNome" type="text" placeholder="Seu nome" required /> <!--ele é auto fechado // cria o campo de escrita. placeholder = dica p/ usuário // required == obrigatório // name = para dizer o valor que o usuário falar  -->
+<!--for se vincula ao id, texto, designa o label com o for, para entender que o label é parte do input-->
+</div>
+
+<div>
+    <label for="campoEmail">Email</label><br/>
+    <input id="campoEmail" name="campoEmail" type="email" placeholder="usuário@exemplo.com" required/>
+</div>
+
+<div>
+    <label for="campoSenha">Senha</label><br/>
+    <input id="campoSenha" name="campoSenha" type="password" placeholder="Sua senha" minlength="5" required/> <!--type passaword deixa a senha oculta-->
+</div>
+<div>
+    <label for="campoGenero">Selecione seu gênero</label><br/>
+    <select id="campoGenero" name="campoGenero">
+        <option selected disabled value="">Selecione uma das opções</option>
+        <option value="Mulher">Mulher</option>
+        <option value="Homem">Homem</option>
+        <option value="Outro">Outro</option>
+        <option value="Trans">Trans</option>
+        <option value="Prefiro não informar">Prefiro não informar</option>
+    </select>
+</div>
+
+<div>
+    <!--caixa de seleções c/ opções-->
+<label for="campoProfissao">Profissão</label><br/>
+<select id="campoProfissao" name="campoProfissao" required> <!-- required = selecionar obrigatoriamente-->
+    <option selected disabled value="">Selecione uma opção</option>
+    <option value="Professor">Professor</option>
+    <option value="Técnico">Técnico</option>
+    <option value="Especialista">Especialista</option>
+    <option value="Nenhuma da anteriores" required>Nenhuma das anteriores</option>
+</select> <!--tag selection onde vai ficar option value para caracterizar as opções-->
+</div>
+
+<div>
+    <label>Idioma Nativo</label> <br/>
+    <input id="chekingIngles" name="campoIdioma" type="radio" value="Ingles" required/>
+    <label for="chekingIngles">Inglês</label>
+    <!--radio da as opções de bolinhas-->
+    <input id="chekingEspanhol" name="campoIdioma" type="radio" value="Espanhol" required/>
+    <label for="chekingEspanhol">Espanhol</label>
+
+    <input id="chekingPortugues" name="campoIdioma" type="radio" value="Portugues" required/>
+    <label for="chekingPortugues" name="campoIdioma">Portugues</label>
+
+</div>
+
+<div>
+    <label for="campoResumo">Fale sobre você</label> <br/>
+    <textarea id="campoResumo" name="campoResumo" minlenght="5" maxlength="10" rows="5" cols="30" placeholder="Descreva sua vida profissional" required></textarea> 
+    <!--rows e cols = dimensiona o tamnho da caixinha-->
+    <!--min e maxlenght = numeros max e min de caracteres-->
+</div>
+
+<div>
+    <input id="checkTermos" type="checkbox" name="concordaTermos" required/>
+    <label for="checkTermos">Concordo com os termos de serviços</label> <!--checkbox abre uma caxinha de seleção // for="checkTermos" ajuda a selecionar a partir do texto-->
+</div>
+<hr/> <!--linha-->
+<button type="submit">Enviar</button> <!--botão submit-->
+<button type="reset">Limpar</button>
+<!--onclick = após o clique do usuário no botão-->
+<button type="button" onclick="alert('Olá')">Descubra</button> <!--informa que o button não é de submit-->
+    </form>
+    <!--Qery Parameters = parametro de busca (depois de prenchido o formulario //quando as informações recebidas vão para o servidor
+
+http://10.0.0.131:5500/html/aula_04.html?campoNome=lenita&campoEmail=lenita.mma%40gmail.com&campoSenha=gsgdrger&campoProfissao=Professor&campoIdioma=Portugues&campoResumo=gewrgwergewrgewrgergtegewgewrgwwrgegtegrggkejshg%C3%A7ouhg%C3%A7joesihgisueghiserhgeou%C3%A7rghs%C3%A7eoiugheo%7Esirghw%5Diporghworghiaoigheroigaherigo%7Eeqigh%C3%B5q&concordaTermos=on
+
+Decomposição
+http://10.0.0.131:5500/html/aula_04.html
+?campoNome=lenita
+&campoEmail=lenita.mma%40gmail.com
+&campoSenha=gsgdrger
+&campoProfissao=Professor
+&campoIdioma=Portugues
+&campoResumo=gewrgwergewrgewrgergtegewgewrgw
+&concordaTermos=on -->
+</body>
+</html>

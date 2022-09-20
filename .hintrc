@@ -3,11 +3,10 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off",
-    "axe/name-role-value": [
+    "axe/text-alternatives": [
       "default",
       {
-        "button-name": "off"
+        "document-title": "off"
       }
     ]
   }
