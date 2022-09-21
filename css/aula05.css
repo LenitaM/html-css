@@ -1,0 +1,49 @@
+/*21 DE SETEMBRO DE 2022: Introdução ao CSS */
+/*
+TÓPICOS:
+1)Introdução ao css
+2)Formas de uso do CSS na página
+3)Seletores básicos (id, classe e elemento)
+*/
+p {
+    color:green;
+    font-size:24px;
+    text-decoration:underline;
+}
+ /* quando não tiver no sistema a fonte vai falar "fallback" em que ele vai escolher a fonte do banco de dados sans-serif */
+    /*usando fontes da internet */
+ body {
+    background-color: pink;
+    font-family: "Times New Roman", sans-serif; 
+    
+}
+/*
+TIPOS DE SELETOR BÁSICO
+1)Por elemento
+2)Por id (#) = estilização única
+3)Por class (.) = estilização p/ vários
+*/
+/* h1, h2, h3 e h4 representa as tags que quero que estilização funcione */
+h1,h2,h3,h4 {
+    color: white;
+}
+/* 2) uso o "id" quando quero estilizar algo especifico */
+#meu-h1 {
+    font-weight: 100;
+}
+/* 3) class usado em diversos elmentos diferentes */
+.cabecalho {
+    color: crimson;
+    text-decoration: underline;
+    font-weight: 900;
+}
+.quadrado {
+    width: 250px;
+    height: 250px;
+    background-color: yellow; 
+    border-radius: 32px; /*bordas e px tamnho */
+}
+.banner {
+    width: 20%;
+    border-radius: 32px;
+}

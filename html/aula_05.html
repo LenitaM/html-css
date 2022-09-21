@@ -1,0 +1,44 @@
+<!--AULA 5: 21 DE SETEMBRO DE 2021: CONHECENDO CSS-->
+<!--Formas de uso:
+1)Inline = vai direto no elemento
+2)tag <style> vai direto no html
+3)Dentro de arquivo.css separado do arquivo.html: vc pode reaparoveitar, facilitar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+<style> /*bloco do css */
+/* <seletor> {
+    propriedade: valor;
+    propriedade: valor;
+}*/
+/* p {
+    color: blue;
+    font-size: 24px;
+    font-style: italic;
+} */
+</style>
+ <!-- stylesheet = folha de estilos-->
+<link rel="stylesheet" href="\css\aula05.css" />
+</head>
+
+<body>
+    <!--Inline= atributo style, estiliza linhas por linhas, estilização local // ele vai sobreescrever a tag <style> e o arquivo.css e mudará só o que não foi especificado-->
+    <p style="color:red; font-size: 20px">Olá, Tudo bem</p> <!--px muda o tamnho do texto // os estilos direcionados ficam com prioridades-->
+    <p style="color:blue; font-weight:bold;">"Olá, Mundo!"</p>
+    <!-- o p recebe as propriedades do seletor-->
+    <p>Olá! eu fui estilizado pela tag style</p>
+    <p>Olá! eu fui estilizado pela tag style</p> 
+
+    <h1 id="meu-h1">BATATA</h1>
+    <h2 class="cabecalho">CSS TIPOS SELETOR BÁSICO</h2>
+    <h2 class="cabecalho">Outro exemplo de usar class</h2>
+    <h4 class="cabecalho">Pode ser usado em varios elementos</h4>
+    <h3 class="cabecalho">Muito bom!</h3>
+    <div class="quadrado"></div>
+    <img class="banner"src="\img\16 set 22.jpg"
+    </body>
+</html>
