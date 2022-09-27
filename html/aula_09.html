@@ -1,0 +1,39 @@
+<!--AULA 09 27 DE SET DE 2022: MONTANDO NAVBAR COM FLEXBOX E RESPONSIVIDADES-->
+<!--Responsividades: Fazer adaptações para as paginas se adequarem a todas os moods-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\css\aula09.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="https://soulcodeacademy.org/assets/images/logo/light-logo.png" alt="Brand SoulCode"/>
+                <span class="navbar-burguer" onclick="ativaNavbar()">
+                    &#8801; <!--três barrinhas do botam do menu-->
+                </span>
+            </div>
+            <div class="navbar-menu">
+                <a href="#" class="navbar-link">Inicio</a>
+                <a href="#" class="navbar-link">Bootcamp</a>
+                <a href="#" class="navbar-link">Online</a>
+                <a href="#" class="navbar-link">Ajuda</a>
+            </div>
+
+        </nav>
+    </header>
+    <script>
+        function ativaNavbar() {
+            //js vai varrer o html em busta do elemento .navbar-menu
+            //toglle= coloca se não tiver, remove se tiver classe 
+            //document representa a pagina. querySelector vai buscar a parte que vc quer interagir e .classList é o valor das classes dentro do elemento selecionado e toggle é como interruptor, ele ativa a div.
+            document.querySelector (".navbar-menu").classList.toggle('ativa') 
+        }
+    </script>
+</body>
+</html>
