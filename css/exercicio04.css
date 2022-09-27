@@ -13,8 +13,9 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    gap: 2px;
+    gap: 8px;
     height:10px;
+    height: 10px;
 
 }
 .card-1, .card-2, .card-3 {
@@ -23,10 +24,19 @@ padding: 10px;
 border-radius: 12px;
 overflow: hidden;
 }
-
+.card-1 {
+flex: 1;
+text-align: center;
+}
 .card-2 {
+    flex: 1;
     order: 2;
+    text-align: center;
    
+}
+.card-3 {
+    flex: 1;
+    text-align: center;
 }
 .img{
     border-radius: 12px 12px 0 0;
@@ -50,4 +60,8 @@ overflow: hidden;
 }
 .data {
     font-size: 15px;
+}
+.descricao {
+    display: flex;
+    margin: 15px 15px;
 }
