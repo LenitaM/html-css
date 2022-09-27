@@ -1,0 +1,97 @@
+/*AULA 08 26 DE SET DE 2022: FLEXBOX
+**/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+}
+.box-1 {
+    background-color: rgb(85, 85, 241);
+}
+.box-2 {
+    background-color: pink;
+}
+.box-3 {
+    background-color: rgb(236, 236, 87);
+}
+.box-4 {
+    background-color: rgb(202, 76, 76);
+}
+/*pai de todas as caixas*/
+.container-flex {
+    display: flex; /*Ativa a flexbox*/
+    flex-direction: row; /*columen = posicionar os elementos um abaixo do outro*/ /*row = deixa horizontal*/
+    flex-wrap: wrap; /*respeita o tamnho do site sem modificar a largura de acordo com o aumento ou diminuição da tela, ao passo que diminui a tela ela vai quebrando a linha para continuar com o tamanho da largura*/ /*Quebra a linha quando não tem espaço*/
+    background-color: rgb(209, 206, 206); /*ter uma ideia da div container*/
+    justify-content: center; /*cuida dos elementos do eixo main (row=horizontal)* *pode ser center, space-around, space-between, space-evenly espaça as bordas e as caixas diferente de between*/
+    align-items: center; /*cauida dos elementos do eixo cross(vertical no row), para ele acontecer só com altura definida* *stretch alarga, center centraliza e não estica, flex-start ou flex-end fica no final da div e star no começo*/
+    align-content: center; /*cuida do espaço extra*/
+    height: 350px; /*tamanho das caixas dentro da div*/
+    gap: 8px; /* da espaçamento entre as caixas, é como se fosse um margin, mas muda dentro da div*/
+
+}
+/*.container-flex div**/
+.box-1, .box-2, .box-3, .box-4 {
+    width: 200px; /*400px é o tamnaho da maxima da página*/
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* COMO FUNCIONA ROSS CROSS
+quadro maior é container e os pequenos são divs
+*ROW
+*row é a caixa maior e dentro dele vai ter main e cross, nele main vai ser horizontal e cross vertical
+Main= fala como os elementos são distribuídos, hozirontal
+cross é o eixo vertical
+*COLUMN
+* column = eixo vertical
+*o main torna-se o eixo vertical e o cross horizontal
+**/
+
+/*para o container funcionar pprecisa do display: flex; pq é ele que guarda os elementos*/
+.container-flex-2 {
+    display:flex; /*ativa os containers*/
+    background-color: rgb(117, 191, 209);
+    height: 200px;
+    flex-wrap: wrap; /*se não tiver ele vai decidir a largura do conteudo width = largura e height = altura/ ele respeita a quantidade de pixels independente do tamanho da página*/
+    gap: 8px;
+}
+
+.box-5 {
+    background-color: aquamarine;
+    flex: 1; /*flex determina o tamnanho da ocupação/ pega a dimensão do meio (largura) ocupa 1/3 da largura da tela (3 pq são tres cards / flex = distribuição de largura*/
+    
+}
+.box-6 {
+    background-color: aqua;
+    flex:1; /*1  + 1 =2 então 5 e 6 vão ocupar meio e meio e o 200 px definido de 7 continua inalterado pq tem largura fixa*/
+}
+.box-7 {
+    background-color: blue;
+    width: 200px;
+}
+
+/*FLEX-SELF E ORDER*/
+/*Mexer no card individualmente sem mexer no html*/
+/*align-self: flex-start; /*muda cada caixa individualmente
+order: 1; /*muda a ordem da caixa pessoal, sempre começa com 0 e os negativos ficando na frente da direita- para esquerda
+*/
+.box-1 {
+    align-self: flex-end; /*para funcionar um dos boxs deve ser maior pq ele vai aumentar o div entre eles*/
+    order: 1;
+
+}
+.box-2 {
+    height: 200px;
+
+} 
+.box-3 {
+    align-self: flex-start;
+
+} 
+.box-4 {
+    height: 200px;
+}
+/*não precisa definar o background-color pq eles estão lá em cima*/

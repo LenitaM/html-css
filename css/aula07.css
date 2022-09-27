@@ -1,0 +1,96 @@
+/*AULA 07 23 DE SET DE 2022: ESTILIZAÇÃO DE TABABELAS E BOTÕES*/
+* {
+    /*Garante que os elementos respeitem as dimensões quando possuem padding e border.
+    */
+box-sizing: border-box;
+}
+.box1 {
+    text-align: center;
+    background-color: rgb(107, 160, 107);
+}
+.box2 {
+    text-align: center;
+    background-color: rgb(107, 160, 107);
+}
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+}
+.my-button {
+    background-color:green;
+    border: none;
+    color: black;
+    /*vertical horizontal*/
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer; /*pode ter vários tipos, icone de clique*/
+    border-radius: 6px;
+    /*width:300px; dá uma largura fixa*/
+}
+.my-button:hover {
+    background-color:greenyellow; /*hover faz mudar os estilos dentro dele*/
+}
+.blue {
+    background-color: cornflowerblue;
+}
+.my-table {
+    width:400px;
+    border-collapse: collapse; /*juntas as tabelas*/
+    margin:auto;
+}
+/*estiliza o td/th dentro de .my-table*/
+.my-table td, th {
+    border: 1px solid #ddd;
+    padding:8px;
+}
+.my-table th {
+    background-color:green;
+    padding: 12px 0;
+    color: wheat;
+}
+.my-table tr:hover {
+    background-color: rgb(207, 196, 196);
+}
+/*even=par, odd = impar
+*aplica o estilo aos tr de numero par
+*/
+.my-table tr:nth-child(even) {
+    background-color: rgb(202, 194, 194);
+}
+.my-table td {
+    text-align: center; /*left, right,justify*/
+    height: 50px;
+}
+/*customização do form*/
+.my-form {
+    border-radius: 6px;
+    background-color: beige;
+    padding: 20px 16px;
+    width: 300px;
+    margin: auto;
+}
+.my-form input {
+    width: 100%;
+    padding: 12px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 3px;
+    color:red
+}
+.toda-largura {
+    width: 100%;
+    /*vertical - horizontal*/
+    margin: 6px 0;
+}
+.my-form-group {
+    margin-bottom: 6px;
+}
+/*muda as letras dentro*/
+::placeholder {
+    color: rgb(207, 167, 34);
+}
+h3 {
+    text-align: center;
+    background-color: yellow;
+}

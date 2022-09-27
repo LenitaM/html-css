@@ -1,0 +1,61 @@
+/*AULA 06 22 DE SET DE 2022 : BOX MODEL = espaçamento, cor etc de caixas*/
+/*padding é o espaçamento interno da caixa 
+*margin é espaçamento externo 
+*ordem de TR(em cima a direita)- b (baixo) - Left (esquerda) (sentido horário*/
+h3 {
+    background-color: brown;
+}
+.box1 {
+    background-color: green;
+    padding: 16px;
+    margin: 8px;
+}
+.box2 {
+    background-color: aquamarine;
+    padding: 8px 20px 4px 10px;
+    margin: 8px 10px 20px 40px;
+}
+.box3 {
+    background-color:aqua;
+    /*espessura estilo cor*/
+    /*vários tipos de customização: dashe, dotted, solid etc*/
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+}
+.box4 {
+    background-color: beige;
+    /*a caixa ta com 450 de largura devido ao padding
+    *para resolver só usar *{box-sizing: border-box;}*/
+    width: 400px;
+    padding: 20px;
+    border: 5px solid rgb(245, 153, 153);
+}
+/* o asterisco (*{}) vai mudar todo o arquivo, afetar todos os styles*/
+*{
+    box-sizing: border-box;
+}
+/* delimita a margem: tira a margem do <body>. Asim tira as margens automaticas que o html dá*/
+body {
+    padding: 0;
+    margin: 0;
+    /*ele vai preencher toda pagina pq a foto é menor que a margem*/
+    
+    /*BACKGROUND E SHADOWS*/
+    background-image:  url("https://soulcodeacademy.org/assets/images/logo/light-logo.png") /* right bottom no-repeat fixed;*/
+    /*se vc quer preencher ou não*/
+    /*repet-y = vertical e repet-x = horizontal*/
+    /*background-repeat: no-repeat;*/
+    /*cover=zoom
+    /*background-size: contain;
+    *contain = estica a imagem
+    position = posiciona a imagem na tela 
+    right-bottom = a imagem vai até o limite do box da boddy, mas o height:100% pega todo o limite da pagina*/
+    background-position: right bottom; 
+    height: 100%; /*viewport height = vh*/
+    background-attachment: fixed; /*não acompanha o rolamento da pg*/
+    /* outra opção de configuração de image:
+    background: url("https://soulcodeacademy.org/assets/images/logo/light-logo.png") right bottom no-repeat fixed;*/
+}
+
